@@ -1,0 +1,12 @@
+<h3>New Dealer</h3>
+
+
+<%= simple_form_for(@dealer) do |f| %>
+  
+  <%= f.input :dealer_name %>
+  <%= f.input :description %>
+  <hr>
+  <%= f.submit "Create Dealer" %>
+<% end %>
+
+<%= link_to "Back to dealers", dealers_path %>

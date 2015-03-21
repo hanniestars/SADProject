@@ -1,0 +1,19 @@
+<h3>New Sale</h3>
+
+
+<%= simple_form_for(@sale) do |f| %>
+  
+  <%= f.input :serial_number %>
+  <%= f.input :invoice_number %>
+  <%= f.input :date_of_purchase %>
+  <%= f.input :mode_of_payment %>
+  <%= f.input :mode_of_delivery %>
+  <%= f.input :request_for_installation %>
+  <%= f.input :invoice_amount %>
+  <%= f.input :incentive %>
+  <%= f.association :product %>
+  <hr>
+  <%= f.submit "Create Sales" %>
+<% end %>
+
+<%= link_to "Back to sales", sales_path %>

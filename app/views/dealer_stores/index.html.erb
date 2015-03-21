@@ -1,0 +1,61 @@
+
+    <!--secondary navigation: sidebar for different sales data tables-->
+    <div id="sidebar" class="onefifth wrap">
+      <ul>
+        <!--main category-->
+        <li>
+          <a class="sidetitle" href="">Table</a>
+          <!--sub categories-->
+          <ul>
+            <li><a href="">Basic Table</a></li>
+            <li><a href="">Product Table</a></li>
+            <li><a href="">Customer Table</a></li>
+            <li><a href="">Store Table</a></li>
+          </ul>
+        </li>
+        <hr>
+        <li>
+          <a class="sidetitle" href="">Product</a>
+          <ul>
+            <li><a href="">Refridgerator</a></li>
+            <li><a href="">Washing Machine</a></li>
+            <li><a href="">Airconditioner</a></li>
+          </ul>
+        </li>
+        <hr>
+        <li><a class="sidetitle" href="">Location</a></li>
+        <hr>
+        <li><a class="sidetitle" href="">Time</a></li>
+        <hr>
+        <li><a class="sidetitle" href="">Others</a></li>
+      </ul>
+    </div>
+    <!--replace table headers or table with other fields for other table options-->
+    <div id="salestable" class="fourfifth wrap">
+      <!--table searh bar-->
+      <form class="search">
+              <input type="text" placeholder="Search Keyword">
+            <button class="lmargin wfont" type="submit">Search</button>
+          </form>
+      <table id="salescontent" class="sortable">
+        <thead>
+          <!--table headers-->
+          <tr>
+            <th class="wfont">Branch Name</th>
+            <th class="wfont">Address</th>
+            <th class="wfont">Dealer Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @dealer_stores.each do |dealer_store| %>
+          <tr>
+            <!--replace contents with ruby variables-->
+            <td><%= dealer_store.branch_name %></td>
+            <td><%= dealer_store.address %></td>
+            <td><%= dealer_store.dealer.dealer_name %></td>
+            <%= link_to "Destroy", dealer_store_path(dealer_store.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    </div>

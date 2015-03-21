@@ -1,0 +1,13 @@
+<h3>Edit Dealer Store</h3>
+
+
+<%= simple_form_for(@dealer_store) do |f| %>
+  
+  <%= f.input :branch_name %>
+  <%= f.input :address %>
+  <%= f.association :dealer %>
+  <hr>
+  <%= f.submit "Update Dealer Store" %>
+<% end %>
+
+<%= link_to "Back to dealer stores", dealer_store_path %>

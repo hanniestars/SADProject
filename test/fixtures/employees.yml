@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_name: MyString
+  cellphone_no: MyString
+  agency_id: 1
+  dealer_store_id: 1
+
+two:
+  employee_name: MyString
+  cellphone_no: MyString
+  agency_id: 1
+  dealer_store_id: 1

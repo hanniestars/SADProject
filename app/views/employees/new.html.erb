@@ -1,0 +1,13 @@
+<h3>New Employee</h3>
+
+
+<%= simple_form_for(@employee) do |f| %>  
+  <%= f.input :employee_name %>
+  <%= f.input :cellphone_no %>
+  <%= f.association :agency %>
+  <%= f.association :dealer_store %>
+  <hr>
+  <%= f.submit "Create Employee" %>
+<% end %>
+
+<%= link_to "Back to employees", employees_path %>

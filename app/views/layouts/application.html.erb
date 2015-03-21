@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <!-- css link -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- font link -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Js Script -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!--chartkick graph design: google charts-->
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <!--chartkick graph design: highchart-->
+    <%#= javascript_include_tag "js/highcharts.js", "chartkick" %>
+    <!--js for sorting column content-->
+    <script type="text/javascript" src="js/sorttable.js"></script>
+
+
+    <!--dependencies for table pagination-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/tablepagination.js"></script>
+
+    <!--script for table pagination-->
+    <script type="text/javaScript"> 
+      $(function() {
+        $('table').tablePagination({});
+      });
+    </script>
+
+    <title>Concepcion Midea: Sell Out Tracker</title>
+    <%= csrf_meta_tags %>
+  </head>
+  <% if user_signed_in? %>
+  <nav class="navbar">
+    <ul>
+      <div>
+        <!--link the nav items also fix the :active-->
+        <li><a class="navtitle" href="">Midea</a></li>
+        <li class="item"><a class="wfont" href="#">My Dashboard</a></li>
+        <li class="item"><a class="wfont" href="#"><%= link_to "Sales Data", sales_path %></a></li> 
+        <li class="item"><a class="wfont" href="#"><%= link_to "Analysis", charts_path %></a></li> 
+        <li class="item"><a class="wfont" href="#"><%= link_to "Products", products_path %></a></li> 
+        <li class="item"><a class="wfont" href="#"><%= link_to "Admin", admin_path %></a></li>
+        <!--nav search-->
+        <li>
+          <form class="navform">
+            <input type="text" placeholder="Search">
+            <button class="lmargin" type="submit">Search</button>
+          </form>
+        </li>
+        <!--user find a way to change the name to whoever the user is-->
+        <li class="item">
+
+          <a class="wfont adjust" style="cursor:pointer"><%= current_user.email %></a>
+          
+          <!--dropdown menu-->
+          <ul class="shadow">
+            <li><a class="blfont" href="#">Profile</a></li>
+            <li><a class="blfont" href="#">Setting</a></li>
+            <hr>
+            <li><a class="blfont" href="#"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></a></li>
+            
+          </ul>
+        </li>
+      </div>
+    </ul>
+    <% end %>
+</nav>
+  <body>
+    <div style="margin-top:56px;">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
+
+

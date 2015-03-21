@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  effective_date: 2015-03-21
+  dealer_store_id: 1
+  product_id: 1
+
+two:
+  price: 9.99
+  effective_date: 2015-03-21
+  dealer_store_id: 1
+  product_id: 1

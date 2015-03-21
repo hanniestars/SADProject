@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  serial_number: MyString
+  invoice_number: MyString
+  date_of_purchase: 2015-03-21
+  mode_of_payment: MyString
+  mode_of_delivery: MyString
+  request_for_installation: MyString
+  invoice_amount: 9.99
+  incentive: 9.99
+  product_id: 1
+  dealer_store_id: 1
+  employee_id: 1
+
+two:
+  serial_number: MyString
+  invoice_number: MyString
+  date_of_purchase: 2015-03-21
+  mode_of_payment: MyString
+  mode_of_delivery: MyString
+  request_for_installation: MyString
+  invoice_amount: 9.99
+  incentive: 9.99
+  product_id: 1
+  dealer_store_id: 1
+  employee_id: 1

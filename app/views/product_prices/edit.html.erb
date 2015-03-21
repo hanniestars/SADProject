@@ -1,0 +1,13 @@
+<h3>New Product Price</h3>
+
+
+<%= simple_form_for(@product_price) do |f| %>
+  <%= f.association :dealer_store %>
+  <%= f.association :product %>
+  <%= f.input :price %>
+  <%= f.input :effective_date %>
+  <hr>
+  <%= f.submit "Update Product Price" %>
+<% end %>
+
+<%= link_to "Back to product prices", product_price_path %>
