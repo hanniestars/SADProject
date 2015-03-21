@@ -62,8 +62,8 @@
         <td><%= sale.incentive %></td>
         <td><%= sale.mode_of_payment %></td>
         <td><%= sale.request_for_installation %></td>
-        <td><%= sale.product.name %></td> 
-        <h5><%= render "admins/links" %></h5>
+        <td><%= sale.product.SKU %></td>
+        <%= link_to "Destroy", sale_path(sale.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
         <% end %>
       </tr>
     </tbody>

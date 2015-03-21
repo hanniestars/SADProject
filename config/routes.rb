@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :agencies
   resources :charts
   get '/admins/index', as: "admin"
+  get '/admins/links', as: "links"
 end
