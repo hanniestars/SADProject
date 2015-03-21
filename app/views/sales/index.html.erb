@@ -52,7 +52,20 @@
       </tr>
     </thead>
     <tbody>
-
+        <% @sales.each do |sale| %>
+      <tr>
+        <!--replace contents with ruby variables-->
+        <td><%= sale.date_of_purchase %></td>
+        <td><%= sale.serial_number %></td>
+        <td><%= sale.invoice_number %></td>
+        <td class="rightalign"><%= sale.invoice_amount %></td>
+        <td><%= sale.incentive %></td>
+        <td><%= sale.mode_of_payment %></td>
+        <td><%= sale.request_for_installation %></td>
+        <td><%= sale.product.SKU %></td> 
+        <h5><%= render "admins/links" %></h5>
+        <% end %>
+      </tr>
     </tbody>
   </table>
 </div>
