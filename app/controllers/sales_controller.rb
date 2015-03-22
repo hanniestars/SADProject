@@ -53,5 +53,5 @@ class SalesController < ApplicationController
   def sale_params
     params.require(:sale).permit!
   end
-  
+
 end
