@@ -1,7 +1,16 @@
-<p>Hello <%= @resource.email %>!</p>
-
-<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
-
-<p>Click the link below to unlock your account:</p>
-
-<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+<div id="login">
+  <div class="lpanel">
+    <div class="panel">
+      <!--put midea logo-->
+      <img src="" alt="">
+      <h4>Hello <%= @resource.email %>!</h4>
+      <form>
+		<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+		<p>Click the link below to unlock your account:</p>
+		<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+		</form>
+    </div>
+  </div>
+  <!--change copyright to c accent e in triste-->
+  <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+</div>  

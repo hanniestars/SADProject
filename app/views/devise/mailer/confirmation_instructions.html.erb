@@ -1,5 +1,15 @@
-<p>Welcome <%= @email %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<div id="login">
+  <div class="lpanel">
+    <div class="panel">
+      <!--put midea logo-->
+      <img src="" alt="">
+      <h4>Welcome <%= @email %>!</h4>
+      <form>
+			<p>You can confirm your account email through the link below:</p>
+			<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+		</form>
+    </div>
+  </div>
+  <!--change copyright to c accent e in triste-->
+  <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+</div>  	

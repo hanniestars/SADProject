@@ -1,16 +1,26 @@
-<h2>Resend unlock instructions</h2>
+<div id="login">
+  <div class="lpanel">
+    <div class="panel">
+      <!--put midea logo-->
+      <img src="" alt="">
+      <h4>Resend unlock instructions</h4>
+      <form>
+		<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+		  <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+		  <div class="field">
+		    <%= f.email_field :email, autofocus: true, :placeholder => "Email", :required => true %>
+		  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+		  <div class="actions">
+		    <button><%= f.submit "Resend unlock instructions" %></button>
+		  </div>
+		<% end %>
+
+		<%= render "devise/shared/links" %>
+		</form>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!--change copyright to c accent e in triste-->
+  <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+</div>

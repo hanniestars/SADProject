@@ -1,0 +1,393 @@
+/*colors
+$black: #505050;
+$blue: #2AAAE1;
+$lightblue: #CDE3F5;
+$mediunblue: #55C8ED;
+$darkblue: #1356A0;
+$red: #ED1F46;
+$green: #AFD13E;*/
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+}
+/*font colors*/
+.paneltitle, .panelfooter, .wfont, .navtitle, #login button, .sidetitle{
+	color: #ffffff;
+	font-weight: 700;
+}
+body, .blfont{
+	color: #505050;
+}
+#login, .navbar, .paneltitle, .panelfooter, th, .search button{
+	background-color: #2AAAE1;
+}
+/*default elements/tags*/
+nav, #login, #sidebar{
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+hr{
+	border: 1px solid #eaeaea;
+	margin: 0;
+}
+input, button{
+	border: none;
+	border-radius: 5px;
+	padding: 6px;
+}
+input{
+	min-width: 100px;
+}
+button{
+	min-width: 80px;
+	cursor: pointer;
+}
+button:active{
+	position: relative;
+  	top: 1px;
+}
+ul{
+	list-style: none;
+	display: block;
+}
+a{
+	text-decoration: none;
+}
+footer{
+	color: #ffffff; 
+	font-size: 11px;
+	text-align: center;
+	margin: 24px;
+}
+/*nav css*/
+.navbar{
+	width: 100%;
+	min-height: 50px;
+}
+.navbar ul {
+	padding: 0;
+	margin: 0;
+}
+.navbar li {
+	min-width: 70px;
+    display: inline-block;
+    text-align: center;
+}
+/*menu item*/
+.item{
+	height: 25px;
+	padding: 12px;
+}
+.item:hover, .item:active, #login button{
+	background-color: #1356A0;
+	-webkit-transition: .4s;
+	   -moz-transition: .4s;
+		 -o-transition: .4s;
+	  	-ms-transition: .4s;
+			transition: .4s;
+}
+/*to adjust the dropdown so it wont disappear*/
+.adjust:hover{
+	height: 300px;
+}
+.navbar ul li ul{
+	top: 50px;
+	width: 150px;
+	left: -999em;
+	position: absolute;
+	padding: 0;
+	background-color: #ffffff;
+	border: 1px solid #eaeaea;
+}
+.navbar ul li ul li{
+	width: 100%;
+	padding: 12px 0 12px 0;
+	margin: 0;
+}
+.navbar li li:hover{
+	background-color: #eaeaea;
+	-webkit-transition: .4s;
+	   -moz-transition: .4s;
+		 -o-transition: .4s;
+		-ms-transition: .4s;
+			transition: .4s;
+}
+.navbar li:hover ul, .navbar li.sfhover ul{
+	left: auto;
+	-webkit-transition: .4s;
+	   -moz-transition: .4s;
+		 -o-transition: .4s;
+	  	-ms-transition: .4s;
+			transition: .4s;
+}
+.navtitle{
+	margin: 0 48px;
+	font-size: 16px;
+}
+.navform{
+	padding: 0 12px;
+}
+/*panels css*/
+.panel{
+	min-height: 200px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #eaeaea;
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+}
+.wrap{
+	padding: 0 6px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.panelbody, .paneltitle, .panelfooter{
+	padding: 12px;
+}
+.paneltitle{
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.panelfooter{
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+/**/
+#login{
+	height: 768px;
+}
+.middle{
+	float: none;
+	margin: auto;
+	border: 1px solid #3c3c3c;
+}
+.lpanel{
+	margin: auto;
+	margin-top: 100px;
+	max-width: 400px;
+	/*min-height: 400px;*/
+}
+#login form{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+}
+#login input, #login button{
+	width: 100%;
+	padding: 12px;
+	margin-top: 12px;
+}
+#login input{
+	border: 1px solid #eaeaea;
+	display: block;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+#login h4, #login h5, #login p{
+	text-align: center;
+}
+#login h4{
+	font-size: 16px;
+}
+#login h5{
+	margin-top: 12px;
+}
+#login a{
+	color: #1356A0;
+	font-weight: 300;
+}
+.loginbutton{
+	background-color: #1356A0;
+	color: #ffffff;
+	font-weight: 700;
+}
+.checkbox{
+	width: 22px;
+	float: left;
+	margin: -150px;
+}
+.remember{
+	margin-left: 22px;
+	margin-top: 12px;
+}
+.logo{
+	max-width: 200px;
+	margin: 0;
+}
+/**/
+#sidebar{
+	background-color: #505050;
+	max-width: 200px;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	top:50px;
+
+}
+#sidebar li{
+	margin: 0;
+	padding: 12px;
+}
+#sidebar li:hover{
+	background-color: #3c3c3c;
+}
+#sidebar li li{
+	margin: 0;
+	padding: 6px;
+}
+#sidebar ul{
+	margin: 0;
+	padding: 0;
+}
+#sidebar hr{
+	border: 1px solid #acacac;
+	margin: 0;
+}
+#sidebar a{
+	color: #ffffff;
+}
+#salestable{
+	border-collapse: collapse;
+	margin: 0 0 0 20%;
+	text-align: left;
+}
+#salestable select{
+	padding:3px;
+    margin: 0 12px;
+    background-color:#ffffff;
+    border: 1px solid #eaeaea;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+.tablebutton{
+	cursor: pointer;
+	margin-left: 12px;
+}
+.tablebuttonleft{
+	cursor: pointer;
+	margin-right: 12px;
+}
+#tablePagination{
+	margin-top: 12px;
+	float: right;
+}
+.tableinput{
+	max-width: 20px !important;
+	border-radius: none !important;
+	margin: 0 12px;
+	border:1px solid #eaeaea;
+}
+.strong{
+	font-weight: 700;
+	color: #505050;
+
+}
+@media screen and (min-width: 1000px) {
+	#salestable{
+		margin: 0 0 0 200px;
+	}
+}
+table, td, tr, th {
+	border: 1px solid #eaeaea;
+	padding: 6px;
+}
+th{
+	cursor: pointer;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	min-width: 130px;
+}
+tr:nth-child(even){
+    background-color: #CDE3F5;
+}
+.rightalign{
+	text-align: right;
+}
+.search{
+	margin: 6px 0 12px 0;
+}
+.search input{
+	border: 1px solid #eaeaea;
+}
+.inputs{
+	margin: 0 auto;
+	max-width: 66.67%;
+}
+.inputs form input{
+	border: 1px solid #eaeaea;
+	margin-bottom: 12px;
+	margin-left: 12px;
+}
+.inputs form select{
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	margin-bottom: 12px;
+	margin-left: 12px;
+	padding: 3px;
+    cursor:pointer;
+}
+.mainbutton{
+	background-color: #2AAAE1;
+	border: none;
+	min-width: 150px;
+}
+.hiddenbutton{
+	border: 1px solid #eaeaea;
+	min-width: 150px;
+}
+/*grids*/
+.onethird, .twothird, .whole, .oneforth, .onehalf, .threeforth, .onefifth, .fourfifth{
+	float: left;
+}
+.container{
+	max-width: 960px;
+	margin: auto;
+}
+.row{
+	min-height: 200px;
+	margin-top: 12px;
+}
+.onethird{
+	width: 33.33%;
+}
+.twothird{
+	width: 66.66%;
+}
+.whole{
+	width: 100%;
+}
+.onefifth {
+	width: 20%;
+}
+.fourfifth {
+	width: 80%;
+}
+.oneforth{
+	width: 25%;
+}
+.onehalf{
+	width: 50%;
+}
+.threeforth{
+	width: 75%;
+}
+/*other css*/
+.lmargin{
+	margin-left: 12px;
+}
+.shadow{
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}

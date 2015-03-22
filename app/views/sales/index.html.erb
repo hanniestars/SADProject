@@ -1,5 +1,4 @@
 <!--secondary navigation: sidebar for different sales data tables-->
-
 <div id="sidebar" class="onefifth wrap">
   <ul>
     <!--main category-->
@@ -49,6 +48,9 @@
         <th class="wfont">Payment</th>
         <th class="wfont">Status</th>
         <th class="wfont">SKU</th>
+        <th class="wfont">Product Specialist</th>
+        <th class="wfont">Dealer Store</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -63,7 +65,9 @@
         <td><%= sale.mode_of_payment %></td>
         <td><%= sale.request_for_installation %></td>
         <td><%= sale.product.SKU %></td>
-        <%= link_to "Destroy", sale_path(sale.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+        <td><%= sale.employee.employee_name %></td>
+        <td><%= sale.employee.dealer_store.branch_name%></td>
+        <td><%= link_to "Destroy", sale_path(sale.id), :method => :delete, :data => { :confirm => "Are you sure?" }, :class => "strong" %></td>
         <% end %>
       </tr>
     </tbody>
