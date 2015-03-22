@@ -69,13 +69,8 @@
         <td><%= sale.request_for_installation %></td>
         <td><%= sale.product.SKU %></td>
         <td><%= sale.employee.employee_name %></td>
-<<<<<<< HEAD
         <td><%= sale.employee.dealer_store.branch_name%></td>
         <td><%= link_to "Destroy", sale_path(sale.id), :method => :delete, :data => { :confirm => "Are you sure?" }, :class => "strong" %></td>
-=======
-        <td><%= sale.employee.dealer_store.branch_name %></td>
-        <%= link_to "Destroy", sale_path(sale.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
->>>>>>> 9cdc0aeda1cb05bc107929378958250c093237f0
         <% end %>
       </tr>
     </tbody>

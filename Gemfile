@@ -14,7 +14,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'groupdate'
-gem 'simple_form'
 gem 'chartkick'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
