@@ -1,4 +1,6 @@
-<%= bar_chart Sale.group(:date_of_purchase).sum(:invoice_amount), :library => {:colors => ["#DF151C"]} %>
-<div class="panel onwhole">
-	<%#= line_chart Sale.group_by_week(:date_of_purchase).count %>
+<div class="container">
+	<div class="panel onewhole wrap">
+		<%#= line_chart Sale.group_by_week(:date_of_purchase).count %>
+		<%= bar_chart Sale.group(:date_of_purchase).sum(:invoice_amount), :library => {:colors => ["#DF151C"]} %>
+	</div>
 </div>
