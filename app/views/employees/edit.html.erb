@@ -1,13 +1,11 @@
+<div class="inputs">
 <h3>Edit Employee</h3>
-
-
 <%= simple_form_for(@employee) do |f| %>
   <%= f.input :employee_name %>
   <%= f.input :cellphone_no %>
   <%= f.association :agency %>
   <%= f.association :dealer_store %>
-  <hr>
-  <%= f.submit "Update Employee" %>
+  <%= f.submit "Update Employee", :class => "mainbutton wfont" %>
+  <button class="hiddenbutton lmargin"><%= link_to "Back to employees", employee_path, :class => "blfont" %></button>
 <% end %>
-
-<%= link_to "Back to employees", employee_path %>
+</div>

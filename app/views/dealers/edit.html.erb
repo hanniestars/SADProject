@@ -1,12 +1,9 @@
+<div class="inputs">
 <h3>New Dealer</h3>
-
-
 <%= simple_form_for(@dealer) do |f| %>
-  
   <%= f.input :dealer_name %>
   <%= f.input :description %>
-  <hr>
-  <%= f.submit "Update Dealer" %>
+  <%= f.submit "Update Dealer", :class => "mainbutton wfont" %>
+  <button class="hiddenbutton lmargin"><%= link_to "Back to dealers", dealer_path, :class => "blfont" %></button>
 <% end %>
-
-<%= link_to "Back to dealers", dealer_path %>
+</div>

@@ -229,7 +229,6 @@ footer{
 	margin: 0;
 	padding: 0;
 	top:50px;
-
 }
 #sidebar li{
 	margin: 0;
@@ -253,12 +252,17 @@ footer{
 #sidebar a{
 	color: #ffffff;
 }
+.sidetitle{
+	padding: 0 12px;
+}
 #salestable{
-	border-collapse: collapse;
 	margin: 0 0 0 20%;
+}
+#salestable, #normaltable{
+	border-collapse: collapse;
 	text-align: left;
 }
-#salestable select{
+#salestable select, #normaltable select{
 	padding:3px;
     margin: 0 12px;
     background-color:#ffffff;

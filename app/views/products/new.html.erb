@@ -1,6 +1,5 @@
 <div class="inputs">
 	<h3>New Product</h3>
-	
 		<%= simple_form_for(@product) do |f| %>
 		<%= f.input :SKU %>
 		<%= f.input :name %>
@@ -10,5 +9,4 @@
 			<%= link_to "Back to products", products_path, :class => "blfont" %>
 		</button>
 	<% end %>
-	
 </div>

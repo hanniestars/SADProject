@@ -1,12 +1,10 @@
+<div class="inputs">
 <h3>Edit Product</h3>
-
 <%= simple_form_for(@product) do |f| %>
-  
   <%= f.input :SKU %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <hr>
-  <%= f.submit "Update Product" %>
+  <%= f.submit "Update Product", :class => "mainbutton wfont" %>
+  <button class="hiddenbutton lmargin"><%= link_to "Back to products", product_path, :class => "blfont" %></button>
 <% end %>
-
-<%= link_to "Back to products", product_path %>
+</div>
