@@ -4,7 +4,6 @@
       <!--put midea logo-->
       <img src="" alt="">
       <h4>Resend unlock instructions</h4>
-      <form>
 		<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
 		  <%= devise_error_messages! %>
 
@@ -18,7 +17,6 @@
 		<% end %>
 
 		<%= render "devise/shared/links" %>
-		</form>
     </div>
   </div>
   <!--change copyright to c accent e in triste-->

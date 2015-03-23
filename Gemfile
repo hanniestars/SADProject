@@ -18,9 +18,9 @@ gem 'groupdate'
 # for grouping dates for chart but cant work on sqlite
 gem 'chartkick'
 #for importing data
-gem 'roo'
-gem 'iconv'
-gem 'smarter_csv'
+#gem 'roo'
+#gem 'iconv'
+#gem 'smarter_csv'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

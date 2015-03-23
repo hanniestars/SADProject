@@ -4,7 +4,6 @@
       <!--put midea logo-->
       <img src="" alt="">
       <h4>Forgot your password?</h4>
-      <form>
 		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 		  <%= devise_error_messages! %>
 
@@ -16,10 +15,7 @@
 		    <%= f.submit "Reset Password", :class => "loginbutton" %>
 		  </div>
 		<% end %>
-
-		
         <h5><%= render "devise/shared/links" %></h5>
-      </form>
     </div>
   </div>
   <!--change copyright to c accent e in triste-->

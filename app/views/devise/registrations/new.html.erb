@@ -5,7 +5,6 @@
       <!--put midea logo-->
       <img src="" alt="">
       <h4>Sign Up</h4>
-      <!--<form>-->
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
 
@@ -28,9 +27,6 @@
             <%= f.submit "Sign up", :class => "loginbutton" %>
           </div>
         <% end %>
-
-        
-      <!--</form>-->
       <h5><%= render "devise/shared/links" %></h5>
     </div>
   </div>
