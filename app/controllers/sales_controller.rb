@@ -2,13 +2,15 @@ class SalesController < ApplicationController
 
 	def index
     @sales = Sale.all
-
-    render template: "sales/index"
+    respond_to do |format|
+      format.html
+      format.csv { send_data @sales.to_csv }
+      format.xls # { send_data @sales.to_csv(col_sep: "\t") }
+    end
   end
 
   def show
     @sale = Sale.find(params[:id])
-
     render template: "sales/show"
   end
 
@@ -20,7 +22,6 @@ class SalesController < ApplicationController
 
   def create
     @sale = Sale.new(sale_params)
-
     if @sale.save
         redirect_to sales_path
     else 

@@ -1,8 +1,10 @@
 <h1>ADMIN</h1>
-<%= link_to "Sales", salesadmin_path %><br>
-<%= link_to "Products", products_path %><br>
-<%= link_to "Product Prices", product_prices_path %><br> 
-<%= link_to "Employees", employees_path %><br>
-<%= link_to "Agencies", agencies_path %><br>
-<%= link_to "Dealers", dealers_path %><br>
-<%= link_to "Dealer Stores", dealer_stores_path %><br>
+<div id="tabs">
+	<%= link_to "Sales", salesadmin_path, :id => "tabs-1" %>
+	<%= link_to "Products", products_path, :id => "tabs-2" %>
+	<%= link_to "Product Prices", product_prices_path, :id => "tabs-2" %>
+	<%= link_to "Employees", employees_path, :id => "tabs-4" %>
+	<%= link_to "Agencies", agencies_path, :id => "tabs-5" %>
+	<%= link_to "Dealers", dealers_path, :id => "tabs-6" %>
+	<%= link_to "Dealer Stores", dealer_stores_path, :id => "tabs-7" %>
+</div>

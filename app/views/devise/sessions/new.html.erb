@@ -4,7 +4,7 @@
       <!--put midea logo-->
       <%#= image_tag("logo.jpg", :alt => "concepcion_midea", :class => "logo") %>
       <h4>Log in</h4>
-      <form>
+      <!--<form>-->
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
             <%= f.email_field :email, autofocus: true, :placeholder => "Email" %>
@@ -19,7 +19,7 @@
               <%= f.check_box :remember_me, :class => "checkbox" %>
               <%= f.label :remember_me, :class => "remember" %>
             </div>
-          <% end -%>
+          <% end %>
 
           <div class="actions">
             <%= f.submit "Log in", :class => "loginbutton"%>
@@ -27,7 +27,7 @@
         <% end %>
 
         <h5><%= render "devise/shared/links" %></h5>
-      </form>
+      <!--</form>-->
     </div>
   </div>
   <!--change copyright to c accent e in triste-->
