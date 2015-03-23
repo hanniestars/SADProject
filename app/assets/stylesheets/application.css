@@ -28,6 +28,7 @@ nav, #login, #sidebar{
 	left: 0;
 	right: 0;
 	position: fixed;
+	z-index: 1000;
 }
 hr{
 	border: 1px solid #eaeaea;

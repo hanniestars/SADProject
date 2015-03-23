@@ -1,14 +1,10 @@
-<h3>New Agency</h3>
-
-
-<%= simple_form_for(@agency) do |f| %>
-  
-  <%= f.input :agency_name %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <hr>
-  <%= f.submit "Create Agency" %>
-<% end %>
-
-<%= link_to "Back to agencies", agencies_path %>
-
+<div class="inputs">
+	<h3>New Agency</h3>
+	<%= simple_form_for(@agency) do |f| %>
+	  <%= f.input :agency_name %>
+	  <%= f.input :location %>
+	  <%= f.input :description %>
+	  <%= f.submit "Create Agency", :class => "mainbutton wfont"%>
+	  <button class="hiddenbutton lmargin"><%= link_to "Back to agencies", agencies_path, :class => "blfont" %></button>
+	<% end %>
+</div>

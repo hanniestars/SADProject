@@ -35,47 +35,45 @@
     <%= csrf_meta_tags %>
   </head>
   <% if user_signed_in? %>
-  
-  <nav class="navbar">
-    <ul>
-      <div>
-        <!--link the nav items also fix the :active-->
-        <li><a class="navtitle" href="">Midea</a></li>
-        <li class="item"><%= link_to "My Dashboard", root_path, :class => "wfont" %></li>
-        <li class="item"><%= link_to "Sales Data", sales_path, :class => "wfont" %></li> 
-        <li class="item"><%= link_to "Analysis", charts_path, :class => "wfont" %></li> 
-        <li class="item"><%= link_to "Products", products_path, :class => "wfont" %></li> 
-        <li class="item"><%= link_to "Admin", admin_path, :class => "wfont" %></li>
-        <!--nav search-->
-        <li>
-          <form class="navform">
-            <input type="text" placeholder="Search">
-            <button class="lmargin" type="submit">Search</button>
-          </form>
-        </li>
-        <!--user find a way to change the name to whoever the user is-->
-        <li class="item">
-
-          <a class="wfont adjust" style="cursor:pointer"><%= current_user.email %></a>
-          
-          <!--dropdown menu-->
-          <ul class="shadow">
-            <li><a class="blfont" href="#">Profile</a></li>
-            <li><a class="blfont" href="#">Setting</a></li>
-            <hr>
-            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "blfont"%></li>
-          </ul>
-        </li>
-      </div>
-    </ul>
-    <% end %>
-</nav>
-
   <body>
-    <div style="margin-top:56px;">
+    <nav class="navbar">
+        <ul>
+          <div>
+            <!--link the nav items also fix the :active-->
+            <li><a class="navtitle" href="">Midea</a></li>
+            <li class="item"><%= link_to "My Dashboard", root_path, :class => "wfont" %></li>
+            <li class="item"><%= link_to "Sales Data", sales_path, :class => "wfont" %></li> 
+            <li class="item"><%= link_to "Analysis", charts_path, :class => "wfont" %></li> 
+            <li class="item"><%= link_to "Products", products_path, :class => "wfont" %></li> 
+            <li class="item"><%= link_to "Admin", admin_path, :class => "wfont" %></li>
+            <!--nav search-->
+            <li>
+              <form class="navform">
+                <input type="text" placeholder="Search">
+                <button class="lmargin" type="submit">Search</button>
+              </form>
+            </li>
+            <!--user find a way to change the name to whoever the user is-->
+            <li class="item">
+
+              <a class="wfont adjust" style="cursor:pointer"><%= current_user.email %></a>
+              
+              <!--dropdown menu-->
+              <ul class="shadow">
+                <li><a class="blfont" href="#">Profile</a></li>
+                <li><a class="blfont" href="#">Setting</a></li>
+                <hr>
+                <li><%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "blfont"%></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+    </nav>
+    <div style="margin-top:62px;">
       <%= yield %>
     </div>
   </body>
+  <% end %>
 </html>
 
 
