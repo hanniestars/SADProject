@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <!-- css link -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- font link -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Js Script -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <title>Concepcion Midea: Sell Out Tracker</title>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div>
+      <%= yield %>
+    </div>
+  </body>
+</html>
