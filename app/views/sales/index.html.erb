@@ -31,6 +31,10 @@
 </div>
 <!--replace table headers or table with other fields for other table options-->
 <div id="salestable" class="fourfifth wrap">
+  <%#= form_tag import_sales_path, multipart: true do %>
+    <%#= file_field_tag :file %>
+    <%#= submit_tag "Import" %>
+  <%# end %>
   <!--table searh bar-->
   <form class="search">
         <input type="text" placeholder="Search Keyword">

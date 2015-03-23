@@ -1,10 +1,11 @@
+
 <div id="login">
   <div class="lpanel">
     <div class="panel">
       <!--put midea logo-->
       <img src="" alt="">
       <h4>Sign Up</h4>
-      <form>
+      <!--<form>-->
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
 
@@ -28,8 +29,9 @@
           </div>
         <% end %>
 
-        <h5><%= render "devise/shared/links" %></h5>
-      </form>
+        
+      <!--</form>-->
+      <h5><%= render "devise/shared/links" %></h5>
     </div>
   </div>
   <!--change copyright to c accent e in triste-->

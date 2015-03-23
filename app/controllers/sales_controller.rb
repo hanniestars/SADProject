@@ -11,7 +11,6 @@ class SalesController < ApplicationController
 
   def show
     @sale = Sale.find(params[:id])
-
     render template: "sales/show"
   end
 
@@ -23,7 +22,6 @@ class SalesController < ApplicationController
 
   def create
     @sale = Sale.new(sale_params)
-
     if @sale.save
         redirect_to sales_path
     else 

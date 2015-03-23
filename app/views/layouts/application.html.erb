@@ -7,6 +7,7 @@
 
     <!-- font link -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- Js Script -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -16,7 +17,7 @@
     <%#= javascript_include_tag "js/highcharts.js", "chartkick" %>
     <!--js for sorting column content-->
     <script type="text/javascript" src="js/sorttable.js"></script>
-
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <!--dependencies for table pagination-->
     <script type="text/javascript" src="js/tablepagination.js"></script>
@@ -26,6 +27,7 @@
     <script type="text/javaScript"> 
       $(function() {
         $('table').tablePagination({});
+        $( "#tabs" ).tabs();
       });
     </script>
 
@@ -33,7 +35,7 @@
     <%= csrf_meta_tags %>
   </head>
   <% if user_signed_in? %>
-  <% end %>
+  
   <nav class="navbar">
     <ul>
       <div>
@@ -54,7 +56,7 @@
         <!--user find a way to change the name to whoever the user is-->
         <li class="item">
 
-          <a class="wfont adjust" style="cursor:pointer"><%#= current_user.email %></a>
+          <a class="wfont adjust" style="cursor:pointer"><%= current_user.email %></a>
           
           <!--dropdown menu-->
           <ul class="shadow">
@@ -66,8 +68,9 @@
         </li>
       </div>
     </ul>
-    
+    <% end %>
 </nav>
+
   <body>
     <div style="margin-top:56px;">
       <%= yield %>
