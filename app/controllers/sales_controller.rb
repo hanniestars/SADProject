@@ -38,7 +38,7 @@ class SalesController < ApplicationController
   def update
     @sale = Sale.find(params[:id])
     
-    if @sale.update(move_params)
+    if @sale.update(sale_params)
       redirect_to sales_path
     else
       render template: "sales/edit"

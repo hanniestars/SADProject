@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="panel">
+		<h3><%= @sale.serial_number %></h3>
+		<p><b>Invoice Number:</b> <%= @sale.invoice_number %> <br>
+		   <b>Date of Purchase: </b><%= @sale.date_of_purchase %><br>
+		   <b>Serial Number: </b><%= @sale.serial_number %><br>
+		   <b>Invoice Amount: </b><%= @sale.invoice_amount %><br>
+		   <b>Incentive: </b><%= @sale.incentive %><br>
+		   <b>Mode of Payment: </b><%= @sale.mode_of_payment %><br>
+		   <b>Request for Installation: </b><%= @sale.request_for_installation %><br>
+		   <b>SKU: </b><%= @sale.product.SKU %><br>
+		   <b>Employee Name: </b><%= @sale.employee.employee_name %><br>
+		   <b>Branch Name: </b><%= @sale.employee.dealer_store.branch_name%><br>
+		</p>
+		<%= link_to "Back to sale", sales_path %>
+	</div>
+</div>

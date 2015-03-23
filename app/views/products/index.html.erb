@@ -4,6 +4,7 @@
     <form class="search">
             <input type="text" placeholder="Search Keyword">
           <button class="lmargin wfont" type="submit">Search</button>
+          <button class="mainbutton lmargin"><%= link_to "New Product", new_product_path, :class => "wfont" %></button>
         </form>
     <table id="salescontent" class="sortable">
       <thead>
@@ -13,6 +14,7 @@
           <th class="wfont">Name</th>
           <th class="wfont">Description</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +23,8 @@
           <td><%= product.SKU %></td>
           <td><%= product.name %></td>
           <td><%= product.description %></td>
-          <td><%= link_to "Destroy", product_path(product.SKU), :method => :delete, :data => { :confirm => "Are you sure?", :class => "strong" } %></td>
+          <td><%= link_to "Edit", edit_product_path(product.id)%></td>
+          <td><%= link_to "Destroy", product_path(product.id), :method => :delete, :data => { :confirm => "Are you sure?", :class => "strong"  } %></td>
           <% end %>
         </tr>
       </tbody>

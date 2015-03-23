@@ -13,6 +13,7 @@
             <th class="wfont">Address</th>
             <th class="wfont">Dealer Name</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
             <td><%= dealer_store.branch_name %></td>
             <td><%= dealer_store.address %></td>
             <td><%= dealer_store.dealer.dealer_name %></td>
+            <td><%= link_to "Edit", edit_dealer_store_path(dealer_store.id)%></td>
             <td><%= link_to "Destroy", dealer_store_path(dealer_store.id), :method => :delete, :data => { :confirm => "Are you sure?", :class => "strong" } %>
             <% end %></td>
           </tr>

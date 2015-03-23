@@ -14,6 +14,7 @@
           <th class="wfont">Agency Name</th>
           <th class="wfont">Branch Name</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +25,8 @@
           <td><%= employee.cellphone_no %></td>
           <td><%= employee.agency.agency_name %></td>
           <td><%= employee.dealer_store.branch_name %></td>
-          <td><%= link_to "Destroy", employee_path(employee.id), :method => :delete, :data => { :confirm => "Are you sure?", :class => "strong" } %></td>
+          <td><%= link_to "Edit", edit_employee_path(employee.id)%></td>
+          <td><%= link_to "Destroy", employee_path(employee.id), :method => :delete, :data => { :confirm => "Are you sure?", :class => "strong"  } %></td>
           <% end %>
         </tr>
       </tbody>
