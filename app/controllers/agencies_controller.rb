@@ -37,7 +37,7 @@ class AgenciesController < ApplicationController
   def update
     @agency = Agency.find(params[:id])
     
-    if @agency.update(agency_path)
+    if @agency.update(agency_params)
       redirect_to agencies_path
     else
       render template: "agencies/edit"

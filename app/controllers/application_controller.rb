@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  def index
+    @sales = Sale.all    
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation) }
   end

@@ -37,7 +37,7 @@ class EmployeesController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
     
-    if @employee.update(employee_path)
+    if @employee.update(employee_params)
       redirect_to employees_path
     else
       render template: "employees/edit"

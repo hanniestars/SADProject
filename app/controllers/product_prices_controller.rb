@@ -37,7 +37,7 @@ class ProductPricesController < ApplicationController
   def update
     @product_price = ProductPrice.find(params[:id])
     
-    if @product_price.update(product_price_path)
+    if @product_price.update(product_price_params)
       redirect_to product_prices_path
     else
       render template: "product_prices/edit"

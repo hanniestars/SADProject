@@ -37,7 +37,7 @@ class DealersController < ApplicationController
   def update
     @dealer = Dealer.find(params[:id])
     
-    if @dealer.update(dealer_path)
+    if @dealer.update(dealer_params)
       redirect_to dealers_path
     else
       render template: "dealers/edit"
