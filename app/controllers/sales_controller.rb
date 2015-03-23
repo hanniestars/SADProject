@@ -2,8 +2,11 @@ class SalesController < ApplicationController
 
 	def index
     @sales = Sale.all
-
-    render template: "sales/index"
+    respond_to do |format|
+      format.html
+      format.csv { send_data @sales.to_csv }
+      format.xls # { send_data @sales.to_csv(col_sep: "\t") }
+    end
   end
 
   def show

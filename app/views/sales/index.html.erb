@@ -50,10 +50,7 @@
         <th class="wfont">SKU</th>
         <th class="wfont">Product Specialist</th>
         <th class="wfont">Dealer Store</th>
-<<<<<<< HEAD
         <th></th>
-=======
->>>>>>> 9cdc0aeda1cb05bc107929378958250c093237f0
       </tr>
     </thead>
     <tbody>
@@ -75,4 +72,7 @@
       </tr>
     </tbody>
   </table>
+  Download:
+  <%= link_to "CSV", sales_path(format: "csv") %> |
+  <%= link_to "Excel", sales_path(format: "xls") %>
 </div>
