@@ -40,7 +40,7 @@ input, button{
 	padding: 6px;
 }
 input{
-	min-width: 100px;
+	min-width: 80px;
 }
 button{
 	min-width: 80px;
